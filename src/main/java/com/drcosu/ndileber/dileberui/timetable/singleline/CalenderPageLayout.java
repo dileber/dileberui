@@ -26,6 +26,19 @@ public class CalenderPageLayout extends LinearLayout {
 
     public ICalender iCalender;
 
+    private boolean haveDate;
+
+    public boolean isHaveDate() {
+        return haveDate;
+    }
+
+    public void setHaveDate(boolean haveDate) {
+        this.haveDate = haveDate;
+        if(haveDate){
+            calenderHaveClass.setVisibility(VISIBLE);
+        }
+    }
+
     public interface ICalender{
         void onClickCalender(View view, Date date);
     }
@@ -47,6 +60,7 @@ public class CalenderPageLayout extends LinearLayout {
         View view = LayoutInflater.from(context).inflate(R.layout.widget_calender_page, this, true);
         calenderNum = (CalenderTextView) findViewById(R.id.calenderNum);
         calenderHaveClass = (TextView) findViewById(R.id.calenderHaveClass);
+        calenderHaveClass.setVisibility(INVISIBLE);
     }
 
     public boolean isToday() {
@@ -74,6 +88,15 @@ public class CalenderPageLayout extends LinearLayout {
     public void setSelect(boolean select) {
         this.select = select;
         calenderNum.setSelect(select);
+        if(select){
+            if(haveDate){
+                calenderHaveClass.setVisibility(INVISIBLE);
+            }
+        }else{
+            if(haveDate){
+                calenderHaveClass.setVisibility(VISIBLE);
+            }
+        }
         if( iCalender!= null){
             iCalender.onClickCalender(calenderNum,calenderNum.getCalendar().getTime());
         }

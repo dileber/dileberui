@@ -16,10 +16,41 @@ import com.drcosu.ndileber.dileberui.R;
 import com.drcosu.ndileber.tools.UTime;
 
 import java.util.Date;
+import java.util.List;
 
 /**
- * 默认从周一开始进行轮回
+ * 默认从周一开始进行轮回，默认是当前日期 如果当前日期有数据会展示圆点 可以来回滑动 设置滑动大小 接口点击获取日期数据
  * Created by WaTaNaBe on 2017/8/16.
+ *
+ * 使用方法
+ * xml配置
+ *     <com.drcosu.ndileber.dileberui.timetable.singleline.CalenderSingleView
+ android:id="@+id/calenderSingleView"
+ android:layout_width="match_parent"
+ android:layout_height="wrap_content"
+ app:calender_start="1"
+ app:calender_start_page="4"
+ app:calender_end_page="6"
+ >
+ </com.drcosu.ndileber.dileberui.timetable.singleline.CalenderSingleView>
+ *
+ * 代码使用
+ *
+ *        calenderSingleView = (CalenderSingleView) findViewById(R.id.calenderSingleView);
+ List<Date> temp = new ArrayList<>();
+ temp.add(new Date());
+ Calendar calendar = Calendar.getInstance();
+ calendar.add(Calendar.DATE,-10);
+ temp.add(calendar.getTime());
+
+ calenderSingleView.setGuanxiDate(temp);
+ calenderSingleView.setDateSelectedDelegate(new CalenderViewPageAdapter.DateSelectedDelegate() {
+@Override
+public void onDateSelected(View view, Date date) {
+
+}
+});
+ *
  */
 
 public class CalenderSingleView extends LinearLayout implements CalenderViewPageAdapter.DateSelectedDelegate {
@@ -78,12 +109,12 @@ public class CalenderSingleView extends LinearLayout implements CalenderViewPage
             timeTableCalender.addView(textView);
         }
 
-        CalenderViewPageAdapter calenderViewPageAdapter = new CalenderViewPageAdapter(context,start,start_page,end_page);
+        calenderViewPageAdapter = new CalenderViewPageAdapter(context,start,start_page,end_page);
         calenderViewPageAdapter.setDateSelectedDelegate(this);
         timeTablePage.setAdapter(calenderViewPageAdapter);
         timeTablePage.setCurrentItem(CalenderViewPageAdapter.PAGE_PER+(start>1?-1:0));
     }
-
+    CalenderViewPageAdapter calenderViewPageAdapter = null;
     @Override
     public void onDateSelected(View view, Date date) {
         if(dateSelectedDelegate!=null){
@@ -100,4 +131,8 @@ public class CalenderSingleView extends LinearLayout implements CalenderViewPage
     }
 
     CalenderViewPageAdapter.DateSelectedDelegate dateSelectedDelegate= null;
+
+    public void setGuanxiDate(List<Date> date){
+        calenderViewPageAdapter.setGuanxiDate(date);
+    }
 }

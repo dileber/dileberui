@@ -7,6 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
+import com.drcosu.ndileber.tools.UTime;
+
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -42,18 +44,32 @@ public class CalenderViewPageAdapter extends PagerAdapter implements View.OnClic
 
     private int mStart;
 
-    public CalenderViewPageAdapter(Context context,int start){
-        this.context = context;
-        this.mStart = start;
-        initView();
+    public CalenderViewPageAdapter(Context context,Integer start){
+        this(context,start,null,null);
     }
-    public CalenderViewPageAdapter(Context context,int start,int startPage,int endPage){
+    public CalenderViewPageAdapter(Context context,Integer start,Integer startPage,Integer endPage){
+        this(context,start,null,null,null);
+    }
+
+    public CalenderViewPageAdapter(Context context,Integer start,Integer startPage,Integer endPage,List<Date> date){
         this.context = context;
         this.mStart = start;
-        PAGE_PER = startPage;
-        PAGE_AFT = endPage;
+        if(startPage!=null){
+            PAGE_PER = startPage;
+        }
+        if(endPage!=null){
+            PAGE_AFT = endPage;
+        }
+        if(date!=null){
+            mDate = date;
+        }
         COUNT = PAGE_PER + PAGE_AFT;
         initView();
+    }
+    List<Date> mDate;
+    public void setGuanxiDate(List<Date> date){
+        mDate = date;
+        notifyDataSetChanged();
     }
 
     private void initView(){
@@ -140,6 +156,14 @@ public class CalenderViewPageAdapter extends PagerAdapter implements View.OnClic
                 }else{
                     calenderPageLayout.setToday(false);
                     calenderPageLayout.setSelect(false);
+                }
+                if(mDate!=null){
+                    for(Date m:mDate){
+                        if(UTime.isSameDate(m,calendar.getTime())){
+                            calenderPageLayout.setHaveDate(true);
+                            break;
+                        }
+                    }
                 }
                 calenderPageLayout.setText(String.valueOf(calendar.get(Calendar.DATE)));
                 calenderPageLayout.setCalendar(calendar);
