@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="calendarViewPager">
+        <attr name="state_calendar_today" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="CalenderSingleView">
+        <attr name="calender_start" format="integer" />
+        <attr name="calender_start_page" format="integer" />
+        <attr name="calender_end_page" format="integer" />
+    </declare-styleable>
+
+</resources>

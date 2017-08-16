@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="black">@android:color/black</color>
+    <color name="color333333">#333333</color>
+    <color name="color666666">#666666</color>
+    <color name="color999999">#999999</color>
+    <color name="colord0d0d0">#d0d0d0</color>
+    <color name="transparent">@android:color/transparent</color>
+    <color name="white">@android:color/white</color>
+
+    <!--日历 start-->
+    <color name="calendar_color">#ffffff</color>
+
+    <color name="calendar_bg">#ffffffff</color>
+    <color name="calendar_divider">#ffffff</color>
+    <color name="calendar_text_inactive">#79999999</color>
+    <color name="calendar_text_active">#333333</color>
+    <color name="calendar_text_selected">#ffffff</color>
+    <color name="calendar_text_unselectable">#e7e7e7</color>
+    <color name="calendar_text_mark">#ff77be3c</color>
+    <!--日历 end-->
+
+</resources>

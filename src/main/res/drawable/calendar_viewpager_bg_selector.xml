@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Copyright 2012 Square, Inc. -->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:state_selected="true">
+        <shape>
+            <corners android:radius="90dp" />
+            <solid android:color="#5a6975" />
+        </shape>
+    </item>
+    <item android:state_pressed="true">
+        <shape>
+            <corners android:radius="90dp" />
+            <solid android:color="#5a6975" />
+        </shape>
+    </item>
+    <item app:state_calendar_today="true">
+        <shape>
+            <corners android:radius="90dp" />
+            <solid android:color="#007AFF" />
+        </shape>
+
+    </item>
+    <item>
+        <color android:color="@color/transparent" />
+    </item>
+</selector>
