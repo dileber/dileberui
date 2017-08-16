@@ -1,8 +1,8 @@
-package com.example.test.dileberui;
+package com.drcosu.ndileber.dileberui;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 /**
  * Example local unit test, which will execute on the development machine (host).
