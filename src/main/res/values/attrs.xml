@@ -10,4 +10,17 @@
         <attr name="calender_end_page" format="integer" />
     </declare-styleable>
 
+    <declare-styleable name="EmptyPageLayout">
+        <attr name="tipMsg" format="string" />
+        <attr name="anchor" format="reference" />
+        <attr name="refreshEnable" format="boolean" />
+        <attr name="eplType">
+            <enum name="netWorkError" value="0" />
+            <enum name="emptyModuleLibrary" value="1" />
+            <enum name="emptyData" value="2" />
+            <enum name="emptyMsg" value="3" />
+        </attr>
+    </declare-styleable>
+
+
 </resources>
