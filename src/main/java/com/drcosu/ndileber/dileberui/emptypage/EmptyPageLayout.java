@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
+import android.support.annotation.DrawableRes;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
@@ -22,35 +23,75 @@ import com.drcosu.ndileber.view.DileberBaseView;
 
 
 /**
+ * 使用方法
+ emptyPage.setOnRefreshDelegate(new EmptyPageLayout.OnRefreshDelegate() {
+@Override
+public void onRefresh() {
+
+}
+}); *
+
+ emptyPage.setEmptyType(empty);
  * Created by 王二蛋 on 16/5/6.
  */
 public class EmptyPageLayout extends DileberBaseView {
 
-    public enum Empty {
+    private Builder.Empty networkError = new Builder().build("Oops，遇到问题了，刷新试试", R.mipmap.empty_page_fail, true).create();
+    private Builder.Empty emptyData = new Builder().build("暂时没有任何数据，去别处看看吧", R.mipmap.empty_page_tip, false).create();
 
-        NetworkError("Oops，遇到问题了，刷新试试", R.mipmap.empty_page_fail, true),
-        EmptyData("暂时没有任何数据，去别处看看吧", R.mipmap.empty_page_tip, false);
+    public final class Builder{
+        private String msg = "暂时没有任何数据，去别处看看吧";
+        private int anchor = R.mipmap.empty_page_tip;
+        private boolean refreshAble = false;
 
-        private String msg;
-        private int anchor;
-        private boolean refreshAble;
-
-        Empty(String msg, int anchor, boolean refreshAble) {
+        public Builder build(String msg,int anchor,boolean refreshAble) {
             this.msg = msg;
             this.anchor = anchor;
             this.refreshAble = refreshAble;
+            return this;
         }
 
-        public String getMsg() {
-            return msg;
+        public Builder msg(String msg) {
+            this.msg = msg;
+            return this;
         }
 
-        public int getAnchor() {
-            return anchor;
+        public Builder anchor(int anchor) {
+            this.anchor = anchor;
+            return this;
         }
 
-        public boolean isRefreshAble() {
-            return refreshAble;
+        public Builder refreshAble(boolean refreshAble) {
+            this.refreshAble = refreshAble;
+            return this;
+        }
+
+        public Empty create(){
+            return new Empty(msg,anchor,refreshAble);
+        }
+
+        class Empty{
+            private String msg ;
+            private int anchor ;
+            private boolean refreshAble ;
+
+            public Empty(String msg, int anchor, boolean refreshAble) {
+                this.msg = msg;
+                this.anchor = anchor;
+                this.refreshAble = refreshAble;
+            }
+
+            public String getMsg() {
+                return msg;
+            }
+
+            public int getAnchor() {
+                return anchor;
+            }
+
+            public boolean isRefreshAble() {
+                return refreshAble;
+            }
         }
     }
 
@@ -79,10 +120,10 @@ public class EmptyPageLayout extends DileberBaseView {
             if (typedArray.getInt(R.styleable.EmptyPageLayout_eplType, -1) != -1) {
                 switch (typedArray.getInt(R.styleable.EmptyPageLayout_eplType, -1)) {
                     case 0:
-                        setEmptyType(Empty.NetworkError);
+                        setEmptyType(networkError);
                         break;
                     case 1:
-                        setEmptyType(Empty.EmptyData);
+                        setEmptyType(emptyData);
                         break;
                 }
                 typedArray.recycle();
@@ -108,17 +149,24 @@ public class EmptyPageLayout extends DileberBaseView {
         }
     }
 
-    public void setEmptyType(Empty empty) {
+    public void setEmptyType(Builder.Empty empty) {
         tipMsg.setText(empty.getMsg());
         anchor.setVisibility(View.VISIBLE);
         anchor.setImageResource(empty.anchor);
         refresh.setVisibility(empty.isRefreshAble() ? VISIBLE : GONE);
     }
 
-    public void setEmptyType(Empty empty, String tipMsg) {
+    public void setEmptyType(Builder.Empty empty, String tipMsg) {
         this.tipMsg.setText(tipMsg);
         anchor.setVisibility(View.VISIBLE);
         anchor.setImageResource(empty.anchor);
+        refresh.setVisibility(empty.isRefreshAble() ? VISIBLE : GONE);
+    }
+
+    public void setEmptyType(Builder.Empty empty, @DrawableRes int image) {
+        this.tipMsg.setText(empty.getMsg());
+        anchor.setVisibility(View.VISIBLE);
+        anchor.setImageResource(image);
         refresh.setVisibility(empty.isRefreshAble() ? VISIBLE : GONE);
     }
 

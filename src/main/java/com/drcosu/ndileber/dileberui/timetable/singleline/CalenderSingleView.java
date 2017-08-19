@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import com.drcosu.ndileber.dileberui.R;
 import com.drcosu.ndileber.tools.UTime;
+import com.drcosu.ndileber.view.DileberBaseView;
 
 import java.util.Date;
 import java.util.List;
@@ -53,7 +54,7 @@ public void onDateSelected(View view, Date date) {
  *
  */
 
-public class CalenderSingleView extends LinearLayout implements CalenderViewPageAdapter.DateSelectedDelegate {
+public class CalenderSingleView extends DileberBaseView implements CalenderViewPageAdapter.DateSelectedDelegate {
     ViewPager timeTablePage;
     LinearLayout timeTableCalender;
 

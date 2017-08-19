@@ -9,6 +9,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.drcosu.ndileber.dileberui.R;
+import com.drcosu.ndileber.view.DileberBaseView;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -19,7 +20,7 @@ import java.util.Date;
  * Created by WaTaNaBe on 2017/8/15.
  */
 
-public class CalenderPageLayout extends LinearLayout {
+public class CalenderPageLayout extends DileberBaseView {
 
     CalenderTextView calenderNum;
     TextView calenderHaveClass;
@@ -57,9 +58,9 @@ public class CalenderPageLayout extends LinearLayout {
 
     public CalenderPageLayout(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        View view = LayoutInflater.from(context).inflate(R.layout.widget_calender_page, this, true);
-        calenderNum = (CalenderTextView) findViewById(R.id.calenderNum);
-        calenderHaveClass = (TextView) findViewById(R.id.calenderHaveClass);
+        LayoutInflater.from(context).inflate(R.layout.widget_calender_page, this, true);
+        calenderNum = findView(R.id.calenderNum);
+        calenderHaveClass = findView(R.id.calenderHaveClass);
         calenderHaveClass.setVisibility(INVISIBLE);
     }
 
