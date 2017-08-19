@@ -9,6 +9,7 @@
     <color name="transparent">@android:color/transparent</color>
     <color name="white">@android:color/white</color>
 
+
     <!--日历 start-->
     <color name="calendar_color">#ffffff</color>
 
@@ -20,5 +21,10 @@
     <color name="calendar_text_unselectable">#e7e7e7</color>
     <color name="calendar_text_mark">#ff77be3c</color>
     <!--日历 end-->
+
+    <!--empty_page start-->
+    <color name="empty_page_blue">#22b9ff</color>
+    <!--empty_page end-->
+
 
 </resources>
