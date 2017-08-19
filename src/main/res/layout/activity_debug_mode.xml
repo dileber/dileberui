@@ -3,199 +3,198 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/rootlayout_background"
     android:clipChildren="true"
     android:fitsSystemWindows="true"
     android:orientation="vertical">
 
-    <android.support.design.widget.AppBarLayout
-        android:id="@+id/appBarLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fitsSystemWindows="true">
+    <!--<android.support.design.widget.AppBarLayout-->
+        <!--android:id="@+id/appBarLayout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:fitsSystemWindows="true">-->
 
-        <android.support.design.widget.CollapsingToolbarLayout
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/debugModePage_headerHeight"
-            android:background="@color/themeColor"
-            app:collapsedTitleGravity="left"
-            app:collapsedTitleTextAppearance="@style/CollapsingToolbarLayoutCommonStyle"
-            app:expandedTitleGravity="bottom"
-            app:expandedTitleTextAppearance="@style/CollapsingToolbarLayoutCommonStyle"
-            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
-            app:titleEnabled="true"
-            app:toolbarId="@id/toolbar">
+        <!--<android.support.design.widget.CollapsingToolbarLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="@dimen/debugModePage_headerHeight"-->
+            <!--android:background="@color/themeColor"-->
+            <!--app:collapsedTitleGravity="left"-->
+            <!--app:collapsedTitleTextAppearance="@style/CollapsingToolbarLayoutCommonStyle"-->
+            <!--app:expandedTitleGravity="bottom"-->
+            <!--app:expandedTitleTextAppearance="@style/CollapsingToolbarLayoutCommonStyle"-->
+            <!--app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"-->
+            <!--app:titleEnabled="true"-->
+            <!--app:toolbarId="@id/toolbar">-->
 
-            <LinearLayout
-                android:id="@+id/header"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+            <!--<LinearLayout-->
+                <!--android:id="@+id/header"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="vertical">-->
 
-                <ImageView
-                    android:layout_width="@dimen/appVersion_LogoWidth"
-                    android:layout_height="@dimen/appVersion_LogoHeight"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="20dp"
-                    android:src="@mipmap/ic_launcher" />
+                <!--<ImageView-->
+                    <!--android:layout_width="@dimen/appVersion_LogoWidth"-->
+                    <!--android:layout_height="@dimen/appVersion_LogoHeight"-->
+                    <!--android:layout_gravity="center_horizontal"-->
+                    <!--android:layout_marginTop="20dp"-->
+                    <!--android:src="@mipmap/ic_launcher" />-->
 
-                <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:lineSpacingExtra="5dp"
-                    android:paddingBottom="20dp"
-                    android:paddingLeft="20dp"
-                    android:paddingTop="10dp"
-                    android:text="@string/debugModeIntroduce"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/textSize14" />
-            </LinearLayout>
+                <!--<TextView-->
+                    <!--android:id="@+id/textView"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:lineSpacingExtra="5dp"-->
+                    <!--android:paddingBottom="20dp"-->
+                    <!--android:paddingLeft="20dp"-->
+                    <!--android:paddingTop="10dp"-->
+                    <!--android:text="@string/debugModeIntroduce"-->
+                    <!--android:textColor="@color/white"-->
+                    <!--android:textSize="@dimen/textSize14" />-->
+            <!--</LinearLayout>-->
 
-            <android.support.v7.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                app:layout_collapseMode="pin"
-                app:navigationIcon="@mipmap/ic_back"
-                app:title="爱校V1.9.0" />
-        </android.support.design.widget.CollapsingToolbarLayout>
+            <!--<android.support.v7.widget.Toolbar-->
+                <!--android:id="@+id/toolbar"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="?attr/actionBarSize"-->
+                <!--app:layout_collapseMode="pin"-->
+                <!--app:navigationIcon="@mipmap/ic_back"-->
+                <!--app:title="爱校V1.9.0" />-->
+        <!--</android.support.design.widget.CollapsingToolbarLayout>-->
 
-    </android.support.design.widget.AppBarLayout>
+    <!--</android.support.design.widget.AppBarLayout>-->
 
-    <android.support.v4.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    <!--<android.support.v4.widget.NestedScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--app:layout_behavior="@string/appbar_scrolling_view_behavior">-->
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:orientation="vertical">-->
 
-            <android.support.v7.widget.CardView
-                android:id="@+id/offline"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:foreground="?attr/selectableItemBackground">
+            <!--<android.support.v7.widget.CardView-->
+                <!--android:id="@+id/offline"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:foreground="?attr/selectableItemBackground">-->
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginBottom="15dp"
-                    android:layout_marginLeft="@dimen/pageMarginLeft"
-                    android:layout_marginTop="15dp"
-                    android:text="研发环境"
-                    android:textSize="@dimen/textSize16" />
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center_vertical"-->
+                    <!--android:layout_marginBottom="15dp"-->
+                    <!--android:layout_marginLeft="@dimen/pageMarginLeft"-->
+                    <!--android:layout_marginTop="15dp"-->
+                    <!--android:text="研发环境"-->
+                    <!--android:textSize="@dimen/textSize16" />-->
 
-                <RadioButton
-                    android:id="@+id/rOffLine"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical|right"
-                    android:layout_marginRight="@dimen/pageMarginRight"
-                    android:button="@drawable/item_selector"
-                    android:tag="OffLine" />
-            </android.support.v7.widget.CardView>
+                <!--<RadioButton-->
+                    <!--android:id="@+id/rOffLine"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center_vertical|right"-->
+                    <!--android:layout_marginRight="@dimen/pageMarginRight"-->
+                    <!--android:button="@drawable/item_selector"-->
+                    <!--android:tag="OffLine" />-->
+            <!--</android.support.v7.widget.CardView>-->
 
-            <android.support.v7.widget.CardView
-                android:id="@+id/test"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:foreground="?attr/selectableItemBackground">
+            <!--<android.support.v7.widget.CardView-->
+                <!--android:id="@+id/test"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:foreground="?attr/selectableItemBackground">-->
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginBottom="15dp"
-                    android:layout_marginLeft="@dimen/pageMarginLeft"
-                    android:layout_marginTop="15dp"
-                    android:text="测试环境"
-                    android:textSize="@dimen/textSize16" />
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center_vertical"-->
+                    <!--android:layout_marginBottom="15dp"-->
+                    <!--android:layout_marginLeft="@dimen/pageMarginLeft"-->
+                    <!--android:layout_marginTop="15dp"-->
+                    <!--android:text="测试环境"-->
+                    <!--android:textSize="@dimen/textSize16" />-->
 
-                <RadioButton
-                    android:id="@+id/rTest"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical|right"
-                    android:layout_marginRight="@dimen/pageMarginRight"
-                    android:button="@drawable/item_selector"
-                    android:tag="Test" />
-            </android.support.v7.widget.CardView>
+                <!--<RadioButton-->
+                    <!--android:id="@+id/rTest"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center_vertical|right"-->
+                    <!--android:layout_marginRight="@dimen/pageMarginRight"-->
+                    <!--android:button="@drawable/item_selector"-->
+                    <!--android:tag="Test" />-->
+            <!--</android.support.v7.widget.CardView>-->
 
-            <android.support.v7.widget.CardView
-                android:id="@+id/emulation"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:foreground="?attr/selectableItemBackground">
+            <!--<android.support.v7.widget.CardView-->
+                <!--android:id="@+id/emulation"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:foreground="?attr/selectableItemBackground">-->
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginBottom="15dp"
-                    android:layout_marginLeft="@dimen/pageMarginLeft"
-                    android:layout_marginTop="15dp"
-                    android:text="仿真环境"
-                    android:textSize="@dimen/textSize16" />
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center_vertical"-->
+                    <!--android:layout_marginBottom="15dp"-->
+                    <!--android:layout_marginLeft="@dimen/pageMarginLeft"-->
+                    <!--android:layout_marginTop="15dp"-->
+                    <!--android:text="仿真环境"-->
+                    <!--android:textSize="@dimen/textSize16" />-->
 
-                <RadioButton
-                    android:id="@+id/rEmulation"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical|right"
-                    android:layout_marginRight="@dimen/pageMarginRight"
-                    android:button="@drawable/item_selector"
-                    android:tag="Emulation" />
-            </android.support.v7.widget.CardView>
+                <!--<RadioButton-->
+                    <!--android:id="@+id/rEmulation"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center_vertical|right"-->
+                    <!--android:layout_marginRight="@dimen/pageMarginRight"-->
+                    <!--android:button="@drawable/item_selector"-->
+                    <!--android:tag="Emulation" />-->
+            <!--</android.support.v7.widget.CardView>-->
 
-            <android.support.v7.widget.CardView
-                android:id="@+id/online"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:foreground="?attr/selectableItemBackground">
+            <!--<android.support.v7.widget.CardView-->
+                <!--android:id="@+id/online"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:foreground="?attr/selectableItemBackground">-->
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginBottom="15dp"
-                    android:layout_marginLeft="@dimen/pageMarginLeft"
-                    android:layout_marginTop="15dp"
-                    android:text="线上环境"
-                    android:textSize="@dimen/textSize16" />
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center_vertical"-->
+                    <!--android:layout_marginBottom="15dp"-->
+                    <!--android:layout_marginLeft="@dimen/pageMarginLeft"-->
+                    <!--android:layout_marginTop="15dp"-->
+                    <!--android:text="线上环境"-->
+                    <!--android:textSize="@dimen/textSize16" />-->
 
-                <RadioButton
-                    android:id="@+id/rOnLine"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical|right"
-                    android:layout_marginRight="@dimen/pageMarginRight"
-                    android:button="@drawable/item_selector"
-                    android:tag="OnLine" />
-            </android.support.v7.widget.CardView>
+                <!--<RadioButton-->
+                    <!--android:id="@+id/rOnLine"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center_vertical|right"-->
+                    <!--android:layout_marginRight="@dimen/pageMarginRight"-->
+                    <!--android:button="@drawable/item_selector"-->
+                    <!--android:tag="OnLine" />-->
+            <!--</android.support.v7.widget.CardView>-->
 
-            <android.support.v7.widget.CardView
-                android:id="@+id/sure"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:foreground="?attr/selectableItemBackground">
+            <!--<android.support.v7.widget.CardView-->
+                <!--android:id="@+id/sure"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:foreground="?attr/selectableItemBackground">-->
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginBottom="15dp"
-                    android:layout_marginLeft="@dimen/pageMarginLeft"
-                    android:layout_marginTop="15dp"
-                    android:text="确定"
-                    android:textSize="@dimen/textSize16" />
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center_vertical"-->
+                    <!--android:layout_marginBottom="15dp"-->
+                    <!--android:layout_marginLeft="@dimen/pageMarginLeft"-->
+                    <!--android:layout_marginTop="15dp"-->
+                    <!--android:text="确定"-->
+                    <!--android:textSize="@dimen/textSize16" />-->
 
-            </android.support.v7.widget.CardView>
-        </LinearLayout>
+            <!--</android.support.v7.widget.CardView>-->
+        <!--</LinearLayout>-->
 
-    </android.support.v4.widget.NestedScrollView>
+    <!--</android.support.v4.widget.NestedScrollView>-->
 </android.support.design.widget.CoordinatorLayout>

@@ -6,34 +6,34 @@
     android:gravity="center"
     android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/anchor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/ic_empty_module_library" />
+    <!--<ImageView-->
+        <!--android:id="@+id/anchor"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:src="@mipmap/ic_empty_module_library" />-->
 
-    <TextView
-        android:id="@+id/tipMsg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/pageMarginLeft"
-        android:layout_marginRight="@dimen/pageMarginRight"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:text="暂无"
-        android:textColor="@color/color999999"
-        android:textSize="@dimen/textSize14" />
+    <!--<TextView-->
+        <!--android:id="@+id/tipMsg"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="@dimen/pageMarginLeft"-->
+        <!--android:layout_marginRight="@dimen/pageMarginRight"-->
+        <!--android:layout_marginTop="20dp"-->
+        <!--android:gravity="center"-->
+        <!--android:text="暂无"-->
+        <!--android:textColor="@color/color999999"-->
+        <!--android:textSize="@dimen/textSize14" />-->
 
-    <TextView
-        android:id="@+id/refresh"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/empty_page_refresh_button_selector"
-        android:paddingBottom="5dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:paddingTop="5dp"
-        android:text="刷新"
-        android:textColor="@color/themeColor" />
+    <!--<TextView-->
+        <!--android:id="@+id/refresh"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="20dp"-->
+        <!--android:background="@drawable/empty_page_refresh_button_selector"-->
+        <!--android:paddingBottom="5dp"-->
+        <!--android:paddingLeft="10dp"-->
+        <!--android:paddingRight="10dp"-->
+        <!--android:paddingTop="5dp"-->
+        <!--android:text="刷新"-->
+        <!--android:textColor="@color/themeColor" />-->
 </LinearLayout>
