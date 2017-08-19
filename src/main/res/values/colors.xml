@@ -26,5 +26,13 @@
     <color name="empty_page_blue">#22b9ff</color>
     <!--empty_page end-->
 
+    <!--select dialog start-->
+    <color name="select_white">#ffffff</color>
+    <color name="select_topbar">#339EFE</color>
+    <color name="select_text_10">#333333</color>
+    <color name="select_line">#dddddd</color>
+    <color name="select_alpha50">#50000000</color>
+    <!--select dialog end-->
+
 
 </resources>
