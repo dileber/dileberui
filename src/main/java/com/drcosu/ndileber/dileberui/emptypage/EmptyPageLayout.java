@@ -36,10 +36,10 @@ public void onRefresh() {
  */
 public class EmptyPageLayout extends DileberBaseView {
 
-    private Builder.Empty networkError = new Builder().build("Oops，遇到问题了，刷新试试", R.mipmap.empty_page_fail, true).create();
-    private Builder.Empty emptyData = new Builder().build("暂时没有任何数据，去别处看看吧", R.mipmap.empty_page_tip, false).create();
+    public static Builder.Empty networkError = new Builder().build("Oops，遇到问题了，刷新试试", R.mipmap.empty_page_fail, true).create();
+    public static Builder.Empty emptyData = new Builder().build("暂时没有任何数据，去别处看看吧", R.mipmap.empty_page_tip, false).create();
 
-    public final class Builder{
+    public static final class Builder{
         private String msg = "暂时没有任何数据，去别处看看吧";
         private int anchor = R.mipmap.empty_page_tip;
         private boolean refreshAble = false;
