@@ -25,6 +25,9 @@
     <!--empty_page start-->
     <color name="empty_page_blue">#22b9ff</color>
     <!--empty_page end-->
+    <!--empty_page start-->
+    <color name="debug_page_blue">#22b9ff</color>
+    <!--empty_page end-->
 
 
 </resources>

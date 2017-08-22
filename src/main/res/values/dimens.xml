@@ -7,4 +7,15 @@
     <dimen name="textSize18">18dp</dimen>
     <dimen name="textSize20">20dp</dimen>
 
+    <!-- appVersionPage -->
+    <dimen name="appVersion_HeaderHeight">200dp</dimen>
+    <dimen name="appVersion_LogoWidth">90dp</dimen>
+    <dimen name="appVersion_LogoMarginTop">30dp</dimen>
+    <dimen name="appVersion_LogoHeight">@dimen/appVersion_LogoWidth</dimen>
+    <dimen name="appVersion_VersionNameTextSize">@dimen/textSize16</dimen>
+    <dimen name="appVersion_VersionStatusPadding">15dp</dimen>
+    <!-- appVersionPage end-->
+
+    <dimen name="pageMarginLeft">20dp</dimen>
+    <dimen name="pageMarginRight">20dp</dimen>
 </resources>
