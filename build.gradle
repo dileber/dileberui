@@ -30,4 +30,5 @@ dependencies {
     provided project(':dileber')
     provided 'com.android.support:design:25.3.1'
     provided 'com.android.support:support-v4:25.3.1'
+    provided 'com.android.support.constraint:constraint-layout:1.0.0-alpha7'
 }

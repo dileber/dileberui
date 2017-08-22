@@ -69,8 +69,19 @@ public class CalenderViewPageAdapter extends PagerAdapter implements View.OnClic
     List<Date> mDate;
     public void setGuanxiDate(List<Date> date){
         mDate = date;
+        linearLayouts = new ArrayList<>();
+        for(int i=0;i<COUNT;i++){
+            linearLayouts.add(null);
+        }
         notifyDataSetChanged();
     }
+
+    @Override
+    public int getItemPosition(Object object) {
+        // 最简单解决 notifyDataSetChanged() 页面不刷新问题的方法
+        return POSITION_NONE;
+    }
+
 
     private void initView(){
 
