@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">dileberui</string>
+
+
+    <string name="debugModeIntroduce">
+        \t\t调试模式:在开发阶段,为了调试及测试方便,
+        提供测试阶段的环境切换,此页面发布后的线上环境不显示。\n
+    </string>
 </resources>
