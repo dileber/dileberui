@@ -89,18 +89,21 @@ public class CalenderPageLayout extends DileberBaseView {
     public void setSelect(boolean select) {
         this.select = select;
         calenderNum.setSelect(select);
+//        if(select){
+//            if(haveDate){
+//                calenderHaveClass.setVisibility(INVISIBLE);
+//            }
+//        }else{
+//            if(haveDate){
+//                calenderHaveClass.setVisibility(VISIBLE);
+//            }
+//        }
         if(select){
-            if(haveDate){
-                calenderHaveClass.setVisibility(INVISIBLE);
-            }
-        }else{
-            if(haveDate){
-                calenderHaveClass.setVisibility(VISIBLE);
+            if( iCalender!= null){
+                iCalender.onClickCalender(calenderNum,calenderNum.getCalendar().getTime());
             }
         }
-        if( iCalender!= null){
-            iCalender.onClickCalender(calenderNum,calenderNum.getCalendar().getTime());
-        }
+
     }
 
     public void setText(String s){
