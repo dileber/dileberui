@@ -7,7 +7,6 @@ import android.support.annotation.DrawableRes;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.widget.Toolbar;
 import android.widget.ImageView;
-
 import com.drcosu.ndileber.dileberui.R;
 import com.drcosu.ndileber.mvp.acivity.BaseActivity;
 import com.drcosu.ndileber.utils.UToolBar;
@@ -25,7 +24,7 @@ public class AppDebugModeActivity extends BaseActivity {
 
 
     public static void start(Context context, String name, @DrawableRes int icon){
-        Intent it = new Intent();
+        Intent it = new Intent(context,AppDebugModeActivity.class);
         it.putExtra(NAME,name);
         it.putExtra(ICON,icon);
         context.startActivity(it);
