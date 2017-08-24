@@ -36,7 +36,7 @@ public class AppDebugModeActivity extends BaseActivity {
     }
 
     @Override
-    protected int layoutViewId() {
+    public int layoutViewId() {
         return R.layout.activity_debug_mode;
     }
 
