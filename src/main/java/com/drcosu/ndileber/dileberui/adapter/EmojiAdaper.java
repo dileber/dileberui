@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.drcosu.ndileber.R;
+import com.drcosu.ndileber.dileberui.R;
 import com.drcosu.ndileber.dileberui.fragment.EmojiFragment;
 
 import java.util.List;

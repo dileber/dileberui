@@ -6,7 +6,7 @@ import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import com.drcosu.ndileber.R;
+import com.drcosu.ndileber.dileberui.R;
 import com.drcosu.ndileber.dileberui.adapter.EmojiAdaper;
 import com.drcosu.ndileber.mvp.fragment.BaseFragment;
 import com.drcosu.ndileber.dileberui.repository.EmojiRepository;
