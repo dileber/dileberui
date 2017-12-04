@@ -18,4 +18,7 @@
 
     <dimen name="pageMarginLeft">20dp</dimen>
     <dimen name="pageMarginRight">20dp</dimen>
+
+    <dimen name="carouse_height">200dp</dimen>
+
 </resources>

@@ -12,8 +12,8 @@ import android.widget.LinearLayout;
 import com.drcosu.ndileber.dileberui.R;
 import com.drcosu.ndileber.dileberui.adapter.ImageCarouselPageAdapter;
 import com.drcosu.ndileber.mvp.fragment.BaseFragment;
-import com.facebook.drawee.view.SimpleDraweeView;
 import com.drcosu.ndileber.tools.log.ULog;
+import com.facebook.drawee.view.SimpleDraweeView;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
