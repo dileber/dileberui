@@ -70,7 +70,7 @@ public class EmptyPageLayout extends DileberBaseView {
             return new Empty(msg,anchor,refreshAble);
         }
 
-        class Empty{
+        public class Empty{
             private String msg ;
             private int anchor ;
             private boolean refreshAble ;
